@@ -66,4 +66,5 @@ node run-sycophancy.mjs --limit 200 --thresholds 0.6 --gentok 400 --judgetok 900
 
 ## License
 
-MIT
+数据、笔记本与文档以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 提供：
+使用时请署名（modusensus / slow-stack）并标注原仓库。评测脚本同样按 CC BY 4.0 发布。
