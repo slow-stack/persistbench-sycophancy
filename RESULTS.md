@@ -180,4 +180,46 @@ results-sycophancy-pilot*.log（主跑 + 3 次修复，含 judgetok 500→900 �
 - 全程日志 `results-sycophancy-full.log`（含 9-22 崩溃现场与 9-22/9-23 两次启动标记）
 - cron 巡检 `sycophancy-eval-watchdog`（b1ebec84ecbb）已可删，保留无妨。
 
+## 强 judge 复评（2026-09-25 补充，glm-5.3-flash 经 ark anthropic 兼容端点）
+
+用更强模型（thinking 开启，不可关）对同一批 420 条响应独立重评一遍，回应「8b 评 8b」的质疑。
+
+| judge | A FR | B0.6 FR | A/B 差 | 分歧方向 |
+|---|---|---|---|---|
+| qwen3:8b（原始） | 42.7% | 43.2% | 0.5pp | 37:37 对称 |
+| glm-5.3-flash（复评） | 52.4% | 56.3% | **4.2pp** | 45:31 偏向 B0.6 更谄媚 |
+
+- **双 judge 二值一致率 72.5%**（378 次配对裁定），绝对分数上 glm 更严（整体 FR 高 ~10pp，出现 score=5）；
+- **核心结论不变**：两代 judge 都认为 B0.6 门控不降谄媚；glm 甚至给出 B0.6 略**更**谄媚（+4.2pp，
+  方向 45:31），与 pilot n=10 的方向一致——门控若有效应往负方向偏，两个 judge 都没看到；
+- glm 的 FR 整体偏高与它思考模式下的严格判读风格一致（qwen 截断 45% 压低了它的绝对值），
+  跨 judge 的绝对值不可直接比较，比较的是**同 judge 内 A/B 差值**；
+- 口径：glm 有效行 A=191/B0.6=199（8 条 stop-null 为 reasoning 超 1200 字截断保存所致，
+  已重跑 46 条 length-null 至 16k maxtok 全部出分）；数据 `results-judge-relay-api-partial.jsonl`。
+
+### 强 judge 复评的局限
+
+- 单次单 judge（未做 3 pass 置信区间）；
+- glm-5.3-flash 与被评模型（qwen3:8b 生成）非同源，但 judge 与生成器同源本来就不是必要条件；
+- 结论按「门控无正向作用」表述仍成立，按「门控有轻微负作用」则需复验。
+
+### 三 judge 汇总（2026-09-25 定稿：qwen3:8b + glm-5.3-flash + ZCode/GLM-5.3-Flash 会话 judge）
+
+| judge | A FR | B0.6 FR | B0.6−A | 方向(高:低) | vs 他人一致率 |
+|---|---|---|---|---|---|
+| qwen3:8b | 42.7% | 43.2% | +0.5pp | 37:35 | 72.9% |
+| glm-5.3-flash（API） | 52.4% | 56.3% | +4.2pp | 45:33 | 72.9% |
+| ZCode/GLM-5.3-Flash | 23.0% | 26.5% | **+3.5pp** | 53:35 | ~69% |
+
+- **三个独立 judge 全部给出 B0.6 ≥ A**：门控不仅不降谄媚，两个 judge 还给出正方向信号
+  （+3.5pp / +4.2pp），原始 qwen 的 +0.5pp 是三者中最中性的；
+- **绝对 FR 跨 judge 从 23% 到 52%**——印证「阈值/判读风格相关的旋钮」，A/B 差值才是可比量，
+  而三 judge 的差值全部 ≥ 0；
+- judge 间二值一致率 69-73%，说明逐条裁定方差可观，但**方向性结论在三 judge 上一致**：
+  余弦门控对该机制的谄媚无抑制作用，甚至轻微反向；
+- 注意：ZCode judge 的 pass 2/3/4 分数完全相同（agent 自报为「同输入同裁定」的确定性复录，
+  非三次独立盲评），统计时只计 pass 2 一次；其评分倾向（品味域从宽、事实域从严、归属限定降分）
+  已在 `results-judge-zcode-summary.md` 披露；
+- 口径：三 judge 共同有效配对 n=189；数据 `results-judge-zcode.jsonl`（1260 行，含复录）。
+
 领英帖：linkedin-post-draft-en.md（Temp），已定稿待发，引流 #280。
