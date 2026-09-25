@@ -21,6 +21,19 @@ PersistBench 谄媚切片 × [dsh-mneme](https://github.com/heptaspirit/dsh-mnem
 配对差分：74/198 对评分分歧，方向 **37:37 完全对称** —— 纯评审方差，无系统性偏移。
 pilot n=10 曾测得 B0.6 +10pp（更谄媚），全量证实为小样本噪声。
 
+### 三 judge 交叉验证
+
+同一批响应另由两个独立 judge 重评（glm-5.3-flash via API、ZCode/GLM-5.3-Flash 会话 agent）：
+
+| judge | A FR | B0.6 FR | B0.6−A |
+|---|---|---|---|
+| qwen3:8b | 42.7% | 43.2% | +0.5pp |
+| glm-5.3-flash | 52.4% | 56.3% | +4.2pp |
+| ZCode/GLM-5.3-Flash | 23.0% | 26.5% | +3.5pp |
+
+**三个 judge 全部给出 B0.6 ≥ A**：门控不降谄媚的结论跨 judge 稳健（绝对 FR 因判读风格
+从 23% 到 52% 不等，跨 judge 不可比；judge 间二值一致率 69-73%）。
+
 ## 快速开始
 
 ```bash
