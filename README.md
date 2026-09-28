@@ -1,6 +1,6 @@
 # persistbench-sycophancy
 
-**余弦门控能降 LLM 记忆谄媚吗？——答案：不能。**
+**余弦门控能降 LLM 记忆谄媚吗？——答案：不能。而且后续两轮实验把「为什么不能」钉死了。**
 
 PersistBench 谄媚切片 × [dsh-mneme](https://github.com/heptaspirit/dsh-mneme) 检索层注入机制的全量实验：
 200 样本 × 2 臂，qwen3:8b 本地 CPU 推理，LLM-as-judge 评审。
@@ -34,6 +34,41 @@ pilot n=10 曾测得 B0.6 +10pp（更谄媚），全量证实为小样本噪声�
 **三个 judge 全部给出 B0.6 ≥ A**：门控不降谄媚的结论跨 judge 稳健（绝对 FR 因判读风格
 从 23% 到 52% 不等，跨 judge 不可比；judge 间二值一致率 69-73%）。
 
+## v2(2026-09-28~29):剂量-选择拆分 + epistemic 控制臂——「为什么不能」的因果版
+
+回应 #280 讨论的两问,全部 Kaggle T4 × qwen3:8b(n=200/臂,会话内配对差口径):
+
+**E1 剂量-选择拆分(固定 2 条,只换选择规则)**
+
+| 臂 | FR | mean | 注入条数 |
+|---|---|---|---|
+| A 全注入 | 42.7% | 2.38 | 10.7 |
+| K2top(最相关 2 条) | **28.0%** | 1.94 | 2.0 |
+| K2bot(最不相关 2 条) | **0.5%** | 1.02 | 2.0 |
+| E0 空注入 | 0.5% | 1.01 | 0.0 |
+
+纯选择效应 **−27.5pp(方向 2:75)** ≈ 纯剂量效应 −15.1pp 的两倍;K2bot ≡ 空注入逐数重合。
+**「剂量占大头」被证伪,相关度轴无可用工作点升级为因果结论**——谄媚源就是高相关记忆本身。
+
+**E2 trustEpistemicWeighting 控制臂(2×2:重排 × [verified] 前缀)**
+
+| 臂 | FR |
+|---|---|
+| A 现状 | 40.9% |
+| R+ 信任重排 | 40.4%(净功劳 **+0.0pp**,方向 28:29) |
+| P [verified] 前缀 | 43.7%(净功劳 **+2.7pp**,方向 30:23) |
+| R+P 重排+前缀 | 44.0% |
+
+重排真实生效(修复 saveWithDedupe 丢 epistemic_status 的写入通路缺口后,151/151 注入序改变)
+但 FR 纹丝不动——**排序不是判别,换序救不了内容**;`[verified]` 前缀三处同向放大服从
+(+2.7~5.4pp),是风险不是功劳。
+
+**三问落点**:判别器只剩内容级候选——实体级冲突检测(query↔memory 换端)、来源信任级、
+注入前复核。**读数纪律**:同 prompt 异会话漂移 ~4pp、会话内同题重复 ~3.2pp,<5pp 的
+效应先过这两把尺;结论只建立在会话内配对差上。
+
+实验报告笔记本:`e-series-report.ipynb`(五个实验一站式复算 + 四张图 + 方法论收获)。
+
 ## 快速开始
 
 ```bash
@@ -50,6 +85,20 @@ ollama serve  # 11434
 node run-sycophancy.mjs --limit 200 --thresholds 0.6 --gentok 400 --judgetok 900
 ```
 
+v2 实验(需要 dsh-mneme 包路径做检索管线):
+
+```bash
+# E1 剂量-选择拆分(固定 2 条,只换选择规则)
+node run-sycophancy.mjs --mneme <dsh-mneme包路径> --mode fixedK --k 2 --limit 200   --gen results-e1-gen.jsonl --judge results-e1-judge.jsonl --gentok 400 --judgetok 900
+# E2 epistemic 2×2(标注 sidecar 已附)
+node label-epistemic.mjs --limit 200 --out sycophancy-epistemic-labels.jsonl
+node run-sycophancy.mjs --mneme <dsh-mneme包路径> --mode epistemic --limit 200   --labels sycophancy-epistemic-labels.jsonl --gen results-e2b-gen.jsonl --judge results-e2b-judge.jsonl
+# E9 域门控 oracle 臂(零 LLM,只需嵌入)
+node run-vector.mjs --mneme <dsh-mneme包路径> --cross-domain data/cross_domain.jsonl   --beneficial data/beneficial_samples.jsonl --thresholds 0.5,0.6,0.7,0.75 --topk 10 --gate dom
+```
+
+没有本地算力?`kaggle/` 里有 T4 全套(PORT.md 八条踩坑 + runner notebook),零 API 额度。
+
 断点安全：脚本按 key 去重，中断后重复同一条命令自动续跑。
 
 ## 文件
@@ -57,6 +106,15 @@ node run-sycophancy.mjs --limit 200 --thresholds 0.6 --gentok 400 --judgetok 900
 | 文件 | 内容 |
 |---|---|
 | `analysis-sycophancy-threshold.ipynb` | 全量分析笔记本（主结果 / 配对差分 / Pareto 全景 / 局限） |
+| `e-series-report.ipynb` | v2 报告笔记本：剂量-选择拆分 / epistemic 2×2 / heat 曲线拟合 / 域门控天花板 |
+| `results-e1-{gen,judge}.jsonl` | E1 fixedK 两臂（800+800 行：A / K2top / K2bot / E0 × 200 样本） |
+| `results-e2-{gen,judge}.jsonl` | E2 第一跑（604 行；R+ 臂因写入通路 bug 作废,作 bug 现场留存） |
+| `results-e2b-{gen,judge}.jsonl` | E2 终跑（604 行,修复后:重排真实生效 151/151） |
+| `sycophancy-epistemic-labels.jsonl` | epistemic_status 显式标注 sidecar（195/200 有效） |
+| `label-epistemic.mjs` + `protocol-epistemic-labeler.txt` | 标注协议与脚本（英文样本显式预填） |
+| `run-vector.mjs` + `data/cross_domain.jsonl` + `data/beneficial_samples.jsonl` | E9 域门控 oracle 臂（`--gate dom`） |
+| `heat-fit-results.json` | E4 heat 曲线拟合聚合结果（幂律 vs 广义指数,per-type β/λ） |
+| `kaggle/` | Kaggle GPU 复现全套(PORT.md 踩坑八条 + runner notebook,零 API 额度) |
 | `RESULTS.md` | 完整实验记录：pilot → 高阈值档 → 全量，含崩溃现场与口径说明 |
 | `run-sycophancy.mjs` | 两阶段评测脚本（G 生成 → J 评审，Node 原生 fetch，无依赖） |
 | `results-sycophancy-gen.jsonl` | G 阶段输出（420 行：query / 注入记忆 / 模型回复） |

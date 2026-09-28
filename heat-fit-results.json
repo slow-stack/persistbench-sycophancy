@@ -1,0 +1,323 @@
+{
+  "exportedAt": "2026-09-26T23:05:18.830Z",
+  "coverage": {
+    "recallRuns": 744,
+    "events": 4469,
+    "memoriesWithEvents": 742,
+    "firstGapSamples": 742,
+    "activeMemories": 399,
+    "lastAccessedCoverage": "895/2836"
+  },
+  "fits": {
+    "constraint": {
+      "n": 401,
+      "medianDtH": 0,
+      "p90DtH": 21.7,
+      "burstFraction": 0.793,
+      "weibull": {
+        "beta": 0.266,
+        "lambda": 1.376,
+        "nll": -91.1,
+        "betaCI95": [
+          0.256,
+          0.278
+        ]
+      },
+      "lomax": {
+        "alpha": 0.374,
+        "lambda": 168,
+        "nll": -185.2
+      },
+      "dNLL_lomax_minus_weibull": -94.1,
+      "tailFit": {
+        "n": 39,
+        "weibullBeta": 2.012,
+        "lomaxAlpha": 11.499,
+        "dNLL_lomax_minus_weibull": 13.3
+      },
+      "verdict": "幂律更贴合"
+    },
+    "decision": {
+      "n": 753,
+      "medianDtH": 0,
+      "p90DtH": 9.2,
+      "burstFraction": 0.839,
+      "weibull": {
+        "beta": 0.266,
+        "lambda": 1.578,
+        "nll": -507.5,
+        "betaCI95": [
+          0.257,
+          0.277
+        ]
+      },
+      "lomax": {
+        "alpha": 0.44,
+        "lambda": 168,
+        "nll": -775.8
+      },
+      "dNLL_lomax_minus_weibull": -268.2,
+      "tailFit": {
+        "n": 53,
+        "weibullBeta": 2.212,
+        "lomaxAlpha": 9.113,
+        "dNLL_lomax_minus_weibull": 22.3
+      },
+      "verdict": "幂律更贴合"
+    },
+    "history": {
+      "n": 297,
+      "medianDtH": 0.1,
+      "p90DtH": 10.1,
+      "burstFraction": 0.754,
+      "weibull": {
+        "beta": 0.321,
+        "lambda": 1.239,
+        "nll": 110.7,
+        "betaCI95": [
+          0.299,
+          0.356
+        ]
+      },
+      "lomax": {
+        "alpha": 0.369,
+        "lambda": 72,
+        "nll": 128.7
+      },
+      "dNLL_lomax_minus_weibull": 18,
+      "tailFit": {
+        "n": 12,
+        "skipped": "尾段样本 < 30"
+      },
+      "verdict": "亚指数长尾（stretched exp）"
+    },
+    "pattern": {
+      "n": 71,
+      "medianDtH": 0,
+      "p90DtH": 58.3,
+      "burstFraction": 0.62,
+      "weibull": {
+        "beta": 0.223,
+        "lambda": 1.038,
+        "nll": 27.9,
+        "betaCI95": [
+          0.205,
+          0.255
+        ]
+      },
+      "lomax": {
+        "alpha": 0.217,
+        "lambda": 720,
+        "nll": 39.6
+      },
+      "dNLL_lomax_minus_weibull": 11.7,
+      "tailFit": {
+        "n": 14,
+        "skipped": "尾段样本 < 30"
+      },
+      "verdict": "亚指数长尾（stretched exp）"
+    },
+    "pitfall": {
+      "n": 348,
+      "medianDtH": 0,
+      "p90DtH": 30.3,
+      "burstFraction": 0.724,
+      "weibull": {
+        "beta": 0.262,
+        "lambda": 1.173,
+        "nll": 102.6,
+        "betaCI95": [
+          0.252,
+          0.275
+        ]
+      },
+      "lomax": {
+        "alpha": 0.322,
+        "lambda": 168,
+        "nll": 40.5
+      },
+      "dNLL_lomax_minus_weibull": -62.2,
+      "tailFit": {
+        "n": 38,
+        "weibullBeta": 1.776,
+        "lomaxAlpha": 10.024,
+        "dNLL_lomax_minus_weibull": 9.9
+      },
+      "verdict": "幂律更贴合"
+    },
+    "preference": {
+      "n": 1484,
+      "medianDtH": 0,
+      "p90DtH": 0.1,
+      "burstFraction": 0.954,
+      "weibull": {
+        "beta": 0.324,
+        "lambda": 2.893,
+        "nll": -2934,
+        "betaCI95": [
+          0.311,
+          0.346
+        ]
+      },
+      "lomax": {
+        "alpha": 0.759,
+        "lambda": 168,
+        "nll": -3757.5
+      },
+      "dNLL_lomax_minus_weibull": -823.5,
+      "tailFit": {
+        "n": 36,
+        "weibullBeta": 2.136,
+        "lomaxAlpha": 14.079,
+        "dNLL_lomax_minus_weibull": 13.4
+      },
+      "verdict": "幂律更贴合"
+    },
+    "project": {
+      "n": 806,
+      "medianDtH": 0,
+      "p90DtH": 24.9,
+      "burstFraction": 0.801,
+      "weibull": {
+        "beta": 0.263,
+        "lambda": 1.371,
+        "nll": -176.7,
+        "betaCI95": [
+          0.257,
+          0.272
+        ]
+      },
+      "lomax": {
+        "alpha": 0.378,
+        "lambda": 168,
+        "nll": -404.9
+      },
+      "dNLL_lomax_minus_weibull": -228.2,
+      "tailFit": {
+        "n": 84,
+        "weibullBeta": 1.347,
+        "lomaxAlpha": 10.636,
+        "dNLL_lomax_minus_weibull": 8.3
+      },
+      "verdict": "幂律更贴合"
+    },
+    "rejected_solution": {
+      "n": 72,
+      "medianDtH": 0,
+      "p90DtH": 17.2,
+      "burstFraction": 0.833,
+      "weibull": {
+        "beta": 0.25,
+        "lambda": 1.448,
+        "nll": -34.3,
+        "betaCI95": [
+          0.231,
+          0.295
+        ]
+      },
+      "lomax": {
+        "alpha": 0.428,
+        "lambda": 168,
+        "nll": -67.8
+      },
+      "dNLL_lomax_minus_weibull": -33.6,
+      "tailFit": {
+        "n": 7,
+        "skipped": "尾段样本 < 30"
+      },
+      "verdict": "幂律更贴合"
+    },
+    "summary": {
+      "n": 236,
+      "medianDtH": 0,
+      "p90DtH": 0.4,
+      "burstFraction": 0.915,
+      "weibull": {
+        "beta": 0.319,
+        "lambda": 2.41,
+        "nll": -362.3,
+        "betaCI95": [
+          0.294,
+          0.361
+        ]
+      },
+      "lomax": {
+        "alpha": 0.598,
+        "lambda": 168,
+        "nll": -457.7
+      },
+      "dNLL_lomax_minus_weibull": -95.4,
+      "tailFit": {
+        "n": 6,
+        "skipped": "尾段样本 < 30"
+      },
+      "verdict": "幂律更贴合"
+    }
+  },
+  "rankingSensitivity": {
+    "project": {
+      "n": 72,
+      "rho_composite_current_vs_fitted": 0.504,
+      "rho_composite_current_vs_power": 0.693,
+      "top10Overlap_current_vs_fitted": 0.3,
+      "top10Overlap_current_vs_power": 0.3,
+      "top10Overlap_fitted_vs_power": 1
+    },
+    "decision": {
+      "n": 64,
+      "rho_composite_current_vs_fitted": 0.642,
+      "rho_composite_current_vs_power": 0.764,
+      "top10Overlap_current_vs_fitted": 0.6,
+      "top10Overlap_current_vs_power": 0.6,
+      "top10Overlap_fitted_vs_power": 1
+    },
+    "pattern": {
+      "n": 15,
+      "rho_composite_current_vs_fitted": 0.596,
+      "rho_composite_current_vs_power": 0.639,
+      "top10Overlap_current_vs_fitted": 0.8,
+      "top10Overlap_current_vs_power": 0.8,
+      "top10Overlap_fitted_vs_power": 0.9
+    },
+    "pitfall": {
+      "n": 100,
+      "rho_composite_current_vs_fitted": 0.84,
+      "rho_composite_current_vs_power": 0.923,
+      "top10Overlap_current_vs_fitted": 0.3,
+      "top10Overlap_current_vs_power": 0.3,
+      "top10Overlap_fitted_vs_power": 1
+    },
+    "constraint": {
+      "n": 57,
+      "rho_composite_current_vs_fitted": 0.712,
+      "rho_composite_current_vs_power": 0.95,
+      "top10Overlap_current_vs_fitted": 0.5,
+      "top10Overlap_current_vs_power": 0.9,
+      "top10Overlap_fitted_vs_power": 0.6
+    },
+    "preference": {
+      "n": 20,
+      "rho_composite_current_vs_fitted": 0.367,
+      "rho_composite_current_vs_power": 0.474,
+      "top10Overlap_current_vs_fitted": 0.6,
+      "top10Overlap_current_vs_power": 0.6,
+      "top10Overlap_fitted_vs_power": 1
+    },
+    "history": {
+      "n": 55,
+      "rho_composite_current_vs_fitted": 0.949,
+      "rho_composite_current_vs_power": 0.978,
+      "top10Overlap_current_vs_fitted": 0.7,
+      "top10Overlap_current_vs_power": 0.7,
+      "top10Overlap_fitted_vs_power": 0.9
+    },
+    "rejected_solution": {
+      "n": 15,
+      "rho_composite_current_vs_fitted": 0.746,
+      "rho_composite_current_vs_power": 0.889,
+      "top10Overlap_current_vs_fitted": 0.7,
+      "top10Overlap_current_vs_power": 0.9,
+      "top10Overlap_fitted_vs_power": 0.8
+    }
+  }
+}
