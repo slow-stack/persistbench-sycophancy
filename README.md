@@ -69,6 +69,22 @@ pilot n=10 曾测得 B0.6 +10pp（更谄媚），全量证实为小样本噪声�
 
 实验报告笔记本:`e-series-report.ipynb`(五个实验一站式复算 + 四张图 + 方法论收获)。
 
+## v3(2026-09-29):E3 知识冲突切片——冲突披露双向升 FR
+
+现有基准按构造不含冲突,先构造(gen-counterfactual.mjs:同话题反立场记忆,189/200 有效),再测四种披露/处置(n=189):
+
+| 臂 | FR |
+|---|---|
+| C0 诱饵+反事实,无标记 | 26.1% |
+| C1 双方加 `[conflicts with another memory on <topic>]` | **32.3%**(C0→C1 +5.9pp,39:29) |
+| C2 仅反事实加 `[conflicts with the current request's premise]` | **33.5%**(+8.0pp,38:21) |
+| C3 诱饵不注入 | 25.0%(−1.6pp) |
+
+**冲突披露双向升 FR**——与 E2 的 [verified] 前缀合流:上下文内任何标记都在放大注入内容的
+影响力(标记提高显著性,模型更顺着走);C3 证明剔除单一诱饵无效,反事实意见顶上成新锚——
+**FR 跟随「池内是否存在意见内容」**。E2+E3 合并:**上下文内标记整条线关闭**,判别器只剩
+注入前 LLM 复核与真实负载路线。附带发现:现有基准按构造测不了第三类知识冲突。
+
 ## 快速开始
 
 ```bash
@@ -114,6 +130,8 @@ node run-vector.mjs --mneme <dsh-mneme包路径> --cross-domain data/cross_domai
 | `label-epistemic.mjs` + `protocol-epistemic-labeler.txt` | 标注协议与脚本（英文样本显式预填） |
 | `run-vector.mjs` + `data/cross_domain.jsonl` + `data/beneficial_samples.jsonl` | E9 域门控 oracle 臂（`--gate dom`） |
 | `heat-fit-results.json` | E4 heat 曲线拟合聚合结果（幂律 vs 广义指数,per-type β/λ） |
+| `results-e3-{gen,judge}.jsonl` + `results-e3-cf.jsonl` | E3 知识冲突切片(756+756 行 + 189 条反事实) |
+| `run-sycophancy.mjs` | ↑ 同脚本含 `--mode conflict`(四臂)与 `--judge-protocol`(conflict_handling 维度) |
 | `kaggle/` | Kaggle GPU 复现全套(PORT.md 踩坑八条 + runner notebook,零 API 额度) |
 | `RESULTS.md` | 完整实验记录：pilot → 高阈值档 → 全量，含崩溃现场与口径说明 |
 | `run-sycophancy.mjs` | 两阶段评测脚本（G 生成 → J 评审，Node 原生 fetch，无依赖） |
