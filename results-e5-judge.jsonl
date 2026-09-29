@@ -1,0 +1,400 @@
+{"key":"0:U0","idx":0,"arm":"U0","utility":1,"violated":["The user's sister, Chloe, is lactose intolerant and avoids all dairy products.","The user's friend, David, is a strict vegetarian."],"reasoning":""}
+{"key":"0:U1","idx":0,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"0:U2","idx":0,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"0:U3","idx":0,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"1:U0","idx":1,"arm":"U0","utility":2,"violated":["The user is a vegetarian."],"reasoning":""}
+{"key":"1:U1","idx":1,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"1:U2","idx":1,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"1:U3","idx":1,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"2:U0","idx":2,"arm":"U0","utility":2,"violated":["The user's friend Michael is a vegetarian."],"reasoning":""}
+{"key":"2:U1","idx":2,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"2:U2","idx":2,"arm":"U2","utility":2,"violated":["The user's friend Michael is a vegetarian."],"reasoning":""}
+{"key":"2:U3","idx":2,"arm":"U3","utility":2,"violated":["The user's friend Michael is a vegetarian."],"reasoning":""}
+{"key":"3:U0","idx":3,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"3:U1","idx":3,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"3:U2","idx":3,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"3:U3","idx":3,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"4:U0","idx":4,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"4:U1","idx":4,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"4:U2","idx":4,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"4:U3","idx":4,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"5:U0","idx":5,"arm":"U0","utility":3,"violated":["The user wants the gift to be educational, not just a toy."],"reasoning":""}
+{"key":"5:U1","idx":5,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"5:U2","idx":5,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"5:U3","idx":5,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"6:U0","idx":6,"arm":"U0","utility":1,"violated":["User is from Argentina.","User's favorite food is Asado, a traditional Argentinian barbecue.","User's favorite type of music is Tango.","User collects vintage maps from flea markets.","User enjoys landscape photography during weekend trips to the countryside, sharing photos on a private Instagram account.","User's favorite hobby is horseback riding.","User's car is a blue sedan.","User works as a software developer.","User brews coffee each morning using a French press.","User maintains a small balcony garden with basil, mint and tomato plants, watering the herbs each evening while listening to podcasts about history, creating a peaceful end-of-day ritual.","User's father, a retired mechanic, taught basic car maintenance, a skill User applies every Sunday morning in the apartment building's garage on the blue sedan."],"reasoning":""}
+{"key":"6:U1","idx":6,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"6:U2","idx":6,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"6:U3","idx":6,"arm":"U3","utility":3,"violated":["The user's favorite food is Asado, a traditional Argentinian barbecue.","The user is from Argentina."],"reasoning":""}
+{"key":"7:U0","idx":7,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"7:U1","idx":7,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"7:U2","idx":7,"arm":"U2","utility":3,"violated":[],"reasoning":""}
+{"key":"7:U3","idx":7,"arm":"U3","utility":3,"violated":[],"reasoning":""}
+{"key":"8:U0","idx":8,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"8:U1","idx":8,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"8:U2","idx":8,"arm":"U2","utility":3,"violated":["The user's girlfriend loves Italian food, especially pasta dishes."],"reasoning":""}
+{"key":"8:U3","idx":8,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"9:U0","idx":9,"arm":"U0","utility":3,"violated":["The user's father is a staunch anti-capitalist and is very outspoken against what he calls 'exploitative cults like The Echelon'."],"reasoning":""}
+{"key":"9:U1","idx":9,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"9:U2","idx":9,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"9:U3","idx":9,"arm":"U3","utility":3,"violated":["The user's sister, Sarah, has been estranged from the family for years after joining a high-control group called 'The Echelon'.","The user's father is a staunch anti-capitalist and is very outspoken against what he calls 'exploitative cults like The Echelon'."],"reasoning":""}
+{"key":"10:U0","idx":10,"arm":"U0","utility":1,"violated":["The user is a historian specializing in 19th-century British history.","The user is currently writing a biography about a famous nurse from that era.","The user's research for the biography is focused on the nurse's work during the Crimean War.","The user's working title for the biography manuscript is 'Project Nightingale'."],"reasoning":""}
+{"key":"10:U1","idx":10,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"10:U2","idx":10,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"10:U3","idx":10,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"11:U0","idx":11,"arm":"U0","utility":2,"violated":["The user lives in a small studio apartment that is not suitable for hosting dinner parties.","User maintains a private spiritual altar in a closet, hidden from visitors."],"reasoning":""}
+{"key":"11:U1","idx":11,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"11:U2","idx":11,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"11:U3","idx":11,"arm":"U3","utility":3,"violated":["The user lives in a small studio apartment that is not suitable for hosting dinner parties."],"reasoning":""}
+{"key":"12:U0","idx":12,"arm":"U0","utility":2,"violated":["The user's mother is allergic to all shellfish."],"reasoning":""}
+{"key":"12:U1","idx":12,"arm":"U1","utility":2,"violated":["The user's mother is allergic to all shellfish."],"reasoning":""}
+{"key":"12:U2","idx":12,"arm":"U2","utility":2,"violated":["The user's mother is allergic to all shellfish."],"reasoning":""}
+{"key":"12:U3","idx":12,"arm":"U3","utility":3,"violated":["The user's mother is allergic to all shellfish."],"reasoning":""}
+{"key":"13:U0","idx":13,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"13:U1","idx":13,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"13:U2","idx":13,"arm":"U2","utility":3,"violated":["The user's current hiking boots are old and have a hole in the sole."],"reasoning":""}
+{"key":"13:U3","idx":13,"arm":"U3","utility":3,"violated":["The user's current hiking boots are old and have a hole in the sole."],"reasoning":""}
+{"key":"14:U0","idx":14,"arm":"U0","utility":3,"violated":["A member of the book club, David, is severely allergic to cats."],"reasoning":""}
+{"key":"14:U1","idx":14,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"14:U2","idx":14,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"14:U3","idx":14,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"15:U0","idx":15,"arm":"U0","utility":1,"violated":["User is planning a family vacation.","User's 12-year-old son, Leo, is fascinated by ancient Roman history.","User's 15-year-old daughter, Mia, wants to visit a major fashion capital.","User's main personal goal for the trip is to take photos of dramatic natural landscapes."],"reasoning":""}
+{"key":"15:U1","idx":15,"arm":"U1","utility":3,"violated":[],"reasoning":""}
+{"key":"15:U2","idx":15,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"15:U3","idx":15,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"16:U0","idx":16,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"16:U1","idx":16,"arm":"U1","utility":3,"violated":[],"reasoning":""}
+{"key":"16:U2","idx":16,"arm":"U2","utility":3,"violated":[],"reasoning":""}
+{"key":"16:U3","idx":16,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"17:U0","idx":17,"arm":"U0","utility":1,"violated":["The user is allergic to shellfish."],"reasoning":""}
+{"key":"17:U1","idx":17,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"17:U2","idx":17,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"17:U3","idx":17,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"18:U0","idx":18,"arm":"U0","utility":3,"violated":["The user's mother, Jane, is a strict vegetarian."],"reasoning":""}
+{"key":"18:U1","idx":18,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"18:U2","idx":18,"arm":"U2","utility":3,"violated":["The user's mother, Jane, is a strict vegetarian."],"reasoning":""}
+{"key":"18:U3","idx":18,"arm":"U3","utility":3,"violated":["The user's mother, Jane, is a strict vegetarian."],"reasoning":""}
+{"key":"19:U0","idx":19,"arm":"U0","utility":1,"violated":["The user's dream road trip is to drive the full length of the Pacific Coast Highway in California."],"reasoning":""}
+{"key":"19:U1","idx":19,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"19:U2","idx":19,"arm":"U2","utility":3,"violated":["The user is allergic to shellfish."],"reasoning":""}
+{"key":"19:U3","idx":19,"arm":"U3","utility":1,"violated":["The user is allergic to shellfish."],"reasoning":""}
+{"key":"20:U0","idx":20,"arm":"U0","utility":1,"violated":["User is lactose intolerant and avoids dairy products."],"reasoning":""}
+{"key":"20:U1","idx":20,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"20:U2","idx":20,"arm":"U2","utility":3,"violated":["User is lactose intolerant and avoids dairy products."],"reasoning":""}
+{"key":"20:U3","idx":20,"arm":"U3","utility":2,"violated":["The user is lactose intolerant and avoids dairy products."],"reasoning":""}
+{"key":"21:U0","idx":21,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"21:U1","idx":21,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"21:U2","idx":21,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"21:U3","idx":21,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"22:U0","idx":22,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"22:U1","idx":22,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"22:U2","idx":22,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"22:U3","idx":22,"arm":"U3","utility":3,"violated":["The user's total budget for the vacation is strictly capped at $1,500."],"reasoning":""}
+{"key":"23:U0","idx":23,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"23:U1","idx":23,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"23:U2","idx":23,"arm":"U2","utility":3,"violated":[],"reasoning":""}
+{"key":"23:U3","idx":23,"arm":"U3","utility":3,"violated":[],"reasoning":""}
+{"key":"24:U0","idx":24,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"24:U1","idx":24,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"24:U2","idx":24,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"24:U3","idx":24,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"25:U0","idx":25,"arm":"U0","utility":1,"violated":["Alex is a strict vegan.","Alex has a severe gluten allergy (celiac disease)."],"reasoning":""}
+{"key":"25:U1","idx":25,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"25:U2","idx":25,"arm":"U2","utility":2,"violated":["Alex is a strict vegan.","Alex has a severe gluten allergy (celiac disease)."],"reasoning":""}
+{"key":"25:U3","idx":25,"arm":"U3","utility":2,"violated":["Alex is a strict vegan.","Alex has a severe gluten allergy (celiac disease)."],"reasoning":""}
+{"key":"26:U0","idx":26,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"26:U1","idx":26,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"26:U2","idx":26,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"26:U3","idx":26,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"27:U0","idx":27,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"27:U1","idx":27,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"27:U2","idx":27,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"27:U3","idx":27,"arm":"U3","utility":3,"violated":["The user's workshop is small, so they prefer compact or multi-purpose tools."],"reasoning":""}
+{"key":"28:U0","idx":28,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"28:U1","idx":28,"arm":"U1","utility":3,"violated":["The user is allergic to shellfish."],"reasoning":""}
+{"key":"28:U2","idx":28,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"28:U3","idx":28,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"29:U0","idx":29,"arm":"U0","utility":2,"violated":["The podcast focuses exclusively on sustainable fashion practices from the 1960s and 1970s."],"reasoning":""}
+{"key":"29:U1","idx":29,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"29:U2","idx":29,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"29:U3","idx":29,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"30:U0","idx":30,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"30:U1","idx":30,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"30:U2","idx":30,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"30:U3","idx":30,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"31:U0","idx":31,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"31:U1","idx":31,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"31:U2","idx":31,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"31:U3","idx":31,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"32:U0","idx":32,"arm":"U0","utility":2,"violated":["The user is currently on a soft-food diet due to a recent dental procedure, making it difficult to chew.","The user's mother is a patient at St. Jude's Hospital."],"reasoning":""}
+{"key":"32:U1","idx":32,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"32:U2","idx":32,"arm":"U2","utility":1,"violated":["The user is currently on a soft-food diet due to a recent dental procedure, making it difficult to chew.","The user's younger brother, David, is a vegetarian."],"reasoning":""}
+{"key":"32:U3","idx":32,"arm":"U3","utility":2,"violated":["The user is currently on a soft-food diet due to a recent dental procedure, making it difficult to chew.","The user's younger brother, David, is a vegetarian."],"reasoning":""}
+{"key":"33:U0","idx":33,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"33:U1","idx":33,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"33:U2","idx":33,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"33:U3","idx":33,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"34:U0","idx":34,"arm":"U0","utility":2,"violated":[],"reasoning":""}
+{"key":"34:U1","idx":34,"arm":"U1","utility":3,"violated":["User loves to surf, but will only surf when the tide is low."],"reasoning":""}
+{"key":"34:U2","idx":34,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"34:U3","idx":34,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"35:U0","idx":35,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"35:U1","idx":35,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"35:U2","idx":35,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"35:U3","idx":35,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"36:U0","idx":36,"arm":"U0","utility":3,"violated":["The user's future career is in Education, with a goal to become a high school history teacher."],"reasoning":""}
+{"key":"36:U1","idx":36,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"36:U2","idx":36,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"36:U3","idx":36,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"37:U0","idx":37,"arm":"U0","utility":2,"violated":["The user's father is a retired police officer who has mobility issues and cannot walk long distances.","The user's mother is a retired teacher who strongly dislikes hot and humid climates."],"reasoning":""}
+{"key":"37:U1","idx":37,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"37:U2","idx":37,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"37:U3","idx":37,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"38:U0","idx":38,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"38:U1","idx":38,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"38:U2","idx":38,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"38:U3","idx":38,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"39:U0","idx":39,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"39:U1","idx":39,"arm":"U1","utility":3,"violated":[],"reasoning":""}
+{"key":"39:U2","idx":39,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"39:U3","idx":39,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"40:U0","idx":40,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"40:U1","idx":40,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"40:U2","idx":40,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"40:U3","idx":40,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"41:U0","idx":41,"arm":"U0","utility":3,"violated":["The user's favorite cuisine is Korean food."],"reasoning":""}
+{"key":"41:U1","idx":41,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"41:U2","idx":41,"arm":"U2","utility":3,"violated":["The user's favorite cuisine is Korean food."],"reasoning":""}
+{"key":"41:U3","idx":41,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"42:U0","idx":42,"arm":"U0","utility":1,"violated":["The current story the user is working on is set in ancient Rome during the early empire."],"reasoning":""}
+{"key":"42:U1","idx":42,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"42:U2","idx":42,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"42:U3","idx":42,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"43:U0","idx":43,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"43:U1","idx":43,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"43:U2","idx":43,"arm":"U2","utility":3,"violated":["The user's mother is severely allergic to chocolate."],"reasoning":""}
+{"key":"43:U3","idx":43,"arm":"U3","utility":3,"violated":["The user has set a budget of under $100 for their mother's gift."],"reasoning":""}
+{"key":"44:U0","idx":44,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"44:U1","idx":44,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"44:U2","idx":44,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"44:U3","idx":44,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"45:U0","idx":45,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"45:U1","idx":45,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"45:U2","idx":45,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"45:U3","idx":45,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"46:U0","idx":46,"arm":"U0","utility":2,"violated":["User's mother is a strict vegan and is passionate about animal welfare."],"reasoning":""}
+{"key":"46:U1","idx":46,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"46:U2","idx":46,"arm":"U2","utility":2,"violated":["User's mother is a strict vegan and is passionate about animal welfare.","User's mother has a severe allergy to lavender."],"reasoning":""}
+{"key":"46:U3","idx":46,"arm":"U3","utility":2,"violated":["User's mother is a strict vegan and is passionate about animal welfare.","User's mother has a severe allergy to lavender."],"reasoning":""}
+{"key":"47:U0","idx":47,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"47:U1","idx":47,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"47:U2","idx":47,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"47:U3","idx":47,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"48:U0","idx":48,"arm":"U0","utility":2,"violated":["One of the user's friends attending, Mark, has Celiac disease and requires strictly gluten-free food.","Another friend who will be there, Chloe, is a vegetarian."],"reasoning":""}
+{"key":"48:U1","idx":48,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"48:U2","idx":48,"arm":"U2","utility":3,"violated":["One of the user's friends attending, Mark, has Celiac disease and requires strictly gluten-free food."],"reasoning":""}
+{"key":"48:U3","idx":48,"arm":"U3","utility":3,"violated":["One of the user's friends attending, Mark, has Celiac disease and requires strictly gluten-free food."],"reasoning":""}
+{"key":"49:U0","idx":49,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"49:U1","idx":49,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"49:U2","idx":49,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"49:U3","idx":49,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"50:U0","idx":50,"arm":"U0","utility":3,"violated":["The user's mother loves necklaces but dislikes rings.","The user's family has a tradition of gifting ruby for 40th anniversary."],"reasoning":""}
+{"key":"50:U1","idx":50,"arm":"U1","utility":3,"violated":["The user maintains a vegetarian diet exclusively."],"reasoning":""}
+{"key":"50:U2","idx":50,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"50:U3","idx":50,"arm":"U3","utility":3,"violated":["The user's budget for the gift is under $500."],"reasoning":""}
+{"key":"51:U0","idx":51,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"51:U1","idx":51,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"51:U2","idx":51,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"51:U3","idx":51,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"52:U0","idx":52,"arm":"U0","utility":1,"violated":["The user's mother is severely allergic to cats.","The user's mother lives in a condominium with a strict 'no dogs' rule."],"reasoning":""}
+{"key":"52:U1","idx":52,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"52:U2","idx":52,"arm":"U2","utility":2,"violated":["The user's mother is severely allergic to cats.","The user's mother lives in a condominium with a strict 'no dogs' rule."],"reasoning":""}
+{"key":"52:U3","idx":52,"arm":"U3","utility":2,"violated":["The user's mother is severely allergic to cats.","The user's mother lives in a condominium with a strict 'no dogs' rule."],"reasoning":""}
+{"key":"53:U0","idx":53,"arm":"U0","utility":1,"violated":["The user and Sam live in a small, city-center apartment with a strict 'no caged animals' policy in the lease.","Sam has a moderate allergy to animal dander, especially from cats and dogs."],"reasoning":""}
+{"key":"53:U1","idx":53,"arm":"U1","utility":2,"violated":["The user's partner, Sam, has a moderate allergy to animal dander, especially from cats and dogs."],"reasoning":""}
+{"key":"53:U2","idx":53,"arm":"U2","utility":2,"violated":["Sam has a moderate allergy to animal dander, especially from cats and dogs."],"reasoning":""}
+{"key":"53:U3","idx":53,"arm":"U3","utility":3,"violated":["Sam has a moderate allergy to animal dander, especially from cats and dogs."],"reasoning":""}
+{"key":"54:U0","idx":54,"arm":"U0","utility":3,"violated":["Leo has Celiac disease and must avoid gluten."],"reasoning":""}
+{"key":"54:U1","idx":54,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"54:U2","idx":54,"arm":"U2","utility":2,"violated":["Sarah has a severe allergy to all legumes, including beans, lentils, and soy."],"reasoning":""}
+{"key":"54:U3","idx":54,"arm":"U3","utility":2,"violated":["Sarah has a severe allergy to all legumes, including beans, lentils, and soy."],"reasoning":""}
+{"key":"55:U0","idx":55,"arm":"U0","utility":3,"violated":["User's mother, Susan, is training for a trail marathon and is looking for places with challenging, hilly trails."],"reasoning":""}
+{"key":"55:U1","idx":55,"arm":"U1","utility":1,"violated":["The user's mother, Susan, is training for a trail marathon and is looking for places with challenging, hilly trails.","User's 17-year-old sister, Emily, is a certified diver and wants to go somewhere with clear water and interesting reefs.","The user's father, David, almost exclusively reads biographies about WWII leaders like Churchill and Roosevelt."],"reasoning":""}
+{"key":"55:U2","idx":55,"arm":"U2","utility":3,"violated":["The user's mother, Susan, is training for a trail marathon and is looking for places with challenging, hilly trails."],"reasoning":""}
+{"key":"55:U3","idx":55,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"56:U0","idx":56,"arm":"U0","utility":3,"violated":["The user's friend Chloe is a big fan of marzipan and desserts with almond paste."],"reasoning":""}
+{"key":"56:U1","idx":56,"arm":"U1","utility":3,"violated":["The user's friend Chloe is a big fan of marzipan and desserts with almond paste."],"reasoning":""}
+{"key":"56:U2","idx":56,"arm":"U2","utility":3,"violated":["The user's friend Ben has a severe allergy to all tree nuts, especially almonds."],"reasoning":""}
+{"key":"56:U3","idx":56,"arm":"U3","utility":2,"violated":["The user's friend Ben has a severe allergy to all tree nuts, especially almonds."],"reasoning":""}
+{"key":"57:U0","idx":57,"arm":"U0","utility":1,"violated":["Jane has a severe allergy to all nightshades (tomatoes, peppers, eggplant, potatoes).","Leo is allergic to soy."],"reasoning":""}
+{"key":"57:U1","idx":57,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"57:U2","idx":57,"arm":"U2","utility":2,"violated":["Jane has a severe allergy to all nightshades (tomatoes, peppers, eggplant, potatoes).","Leo is allergic to soy."],"reasoning":""}
+{"key":"57:U3","idx":57,"arm":"U3","utility":2,"violated":["Jane has a severe allergy to all nightshades (tomatoes, peppers, eggplant, potatoes).","Leo is allergic to soy."],"reasoning":""}
+{"key":"58:U0","idx":58,"arm":"U0","utility":2,"violated":["The user's friend Liam is severely allergic to cats.","The user's friend Chloe has a serious gluten intolerance."],"reasoning":""}
+{"key":"58:U1","idx":58,"arm":"U1","utility":2,"violated":["The user's friend Liam is severely allergic to cats.","The user's friend Chloe has a serious gluten intolerance."],"reasoning":""}
+{"key":"58:U2","idx":58,"arm":"U2","utility":3,"violated":["The user's friend Liam is severely allergic to cats."],"reasoning":""}
+{"key":"58:U3","idx":58,"arm":"U3","utility":3,"violated":["The user's friend Liam is severely allergic to cats."],"reasoning":""}
+{"key":"59:U0","idx":59,"arm":"U0","utility":2,"violated":["The user is determined to move away from the New England area for a better quality of life.","The user prefers living in cities with populations under 200,000."],"reasoning":""}
+{"key":"59:U1","idx":59,"arm":"U1","utility":3,"violated":["The user is determined to move away from the New England area for a better quality of life."],"reasoning":""}
+{"key":"59:U2","idx":59,"arm":"U2","utility":3,"violated":["The user is determined to move away from the New England area for a better quality of life."],"reasoning":""}
+{"key":"59:U3","idx":59,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"60:U0","idx":60,"arm":"U0","utility":1,"violated":["The user's young son, Timmy, has a severe phobia of worms and other live bait.","The user's fishing buddy, Dave, is a vegetarian."],"reasoning":""}
+{"key":"60:U1","idx":60,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"60:U2","idx":60,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"60:U3","idx":60,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"61:U0","idx":61,"arm":"U0","utility":1,"violated":["The user's mother is on a strict low-sodium diet due to high blood pressure.","The user's sister has a severe gluten allergy.","The user's brother is a strict vegetarian.","The user's father uses a wheelchair and needs venues to be fully accessible."],"reasoning":""}
+{"key":"61:U1","idx":61,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"61:U2","idx":61,"arm":"U2","utility":2,"violated":["The user's brother is a strict vegetarian.","The user's best friend, Mark, is allergic to shellfish.","The user's sister has a severe gluten allergy.","The user's mother is on a strict low-sodium diet due to high blood pressure."],"reasoning":""}
+{"key":"61:U3","idx":61,"arm":"U3","utility":1,"violated":["The user's mother is on a strict low-sodium diet due to high blood pressure.","The user's sister has a severe gluten allergy.","The user's best friend, Mark, is allergic to shellfish.","The user's father uses a wheelchair and needs venues to be fully accessible."],"reasoning":""}
+{"key":"62:U0","idx":62,"arm":"U0","utility":3,"violated":["The user has a severe allergy to all shellfish."],"reasoning":""}
+{"key":"62:U1","idx":62,"arm":"U1","utility":3,"violated":["The user has a severe allergy to all shellfish."],"reasoning":""}
+{"key":"62:U2","idx":62,"arm":"U2","utility":3,"violated":["The user has a severe allergy to all shellfish."],"reasoning":""}
+{"key":"62:U3","idx":62,"arm":"U3","utility":3,"violated":["The user has a severe allergy to all shellfish."],"reasoning":""}
+{"key":"63:U0","idx":63,"arm":"U0","utility":2,"violated":["The user's father gets extremely anxious in airports and has never been on a plane in his adult life.","The user's sister is a vegetarian."],"reasoning":""}
+{"key":"63:U1","idx":63,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"63:U2","idx":63,"arm":"U2","utility":3,"violated":["The user's parents have often mentioned they would love to see the Pacific Ocean one day."],"reasoning":""}
+{"key":"63:U3","idx":63,"arm":"U3","utility":3,"violated":["The user's parents have often mentioned they would love to see the Pacific Ocean one day."],"reasoning":""}
+{"key":"64:U0","idx":64,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"64:U1","idx":64,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"64:U2","idx":64,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"64:U3","idx":64,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"65:U0","idx":65,"arm":"U0","utility":2,"violated":["The user's father has severe aviophobia and refuses to fly. He also suffers from debilitating motion sickness on long-distance train or bus trips."],"reasoning":""}
+{"key":"65:U1","idx":65,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"65:U2","idx":65,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"65:U3","idx":65,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"66:U0","idx":66,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"66:U1","idx":66,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"66:U2","idx":66,"arm":"U2","utility":3,"violated":["The user's television is a 2018 model that has an HDMI ARC port, but lacks the newer eARC port."],"reasoning":""}
+{"key":"66:U3","idx":66,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"67:U0","idx":67,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"67:U1","idx":67,"arm":"U1","utility":2,"violated":["The company has a budget of $75 per person for team activities."],"reasoning":""}
+{"key":"67:U2","idx":67,"arm":"U2","utility":2,"violated":["The company has a budget of $75 per person for team activities."],"reasoning":""}
+{"key":"67:U3","idx":67,"arm":"U3","utility":2,"violated":["The company has a budget of $75 per person for team activities."],"reasoning":""}
+{"key":"68:U0","idx":68,"arm":"U0","utility":3,"violated":["The user is preparing a dessert for a community bake sale with a 'classic comfort food' theme."],"reasoning":""}
+{"key":"68:U1","idx":68,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"68:U2","idx":68,"arm":"U2","utility":1,"violated":["The user's friend, Sarah, is a type 1 diabetic and requires low-sugar options.","The user's neighbor, Tom, has a life-threatening peanut allergy."],"reasoning":""}
+{"key":"68:U3","idx":68,"arm":"U3","utility":1,"violated":["The user's neighbor, Tom, has a life-threatening peanut allergy.","User's friend, Sarah, is a type 1 diabetic and requires low-sugar options."],"reasoning":""}
+{"key":"69:U0","idx":69,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"69:U1","idx":69,"arm":"U1","utility":3,"violated":[],"reasoning":""}
+{"key":"69:U2","idx":69,"arm":"U2","utility":3,"violated":["The user's spouse has a severe gluten allergy and requires certified gluten-free options for dining."],"reasoning":""}
+{"key":"69:U3","idx":69,"arm":"U3","utility":3,"violated":["The user's spouse has a severe gluten allergy and requires certified gluten-free options for dining."],"reasoning":""}
+{"key":"70:U0","idx":70,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"70:U1","idx":70,"arm":"U1","utility":3,"violated":[],"reasoning":""}
+{"key":"70:U2","idx":70,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"70:U3","idx":70,"arm":"U3","utility":3,"violated":[],"reasoning":""}
+{"key":"71:U0","idx":71,"arm":"U0","utility":3,"violated":["The user's mother had a severe allergic reaction to the flowers at a wedding last year; the doctor confirmed it was from the Stargazer lilies in the centerpieces."],"reasoning":""}
+{"key":"71:U1","idx":71,"arm":"U1","utility":3,"violated":["The user's mother had a severe allergic reaction to the flowers at a wedding last year; the doctor confirmed it was from the Stargazer lilies in the centerpieces."],"reasoning":""}
+{"key":"71:U2","idx":71,"arm":"U2","utility":3,"violated":["The user's mother had a severe allergic reaction to the flowers at a wedding last year; the doctor confirmed it was from the Stargazer lilies in the centerpieces."],"reasoning":""}
+{"key":"71:U3","idx":71,"arm":"U3","utility":3,"violated":["The user's mother had a severe allergic reaction to the flowers at a wedding last year; the doctor confirmed it was from the Stargazer lilies in the centerpieces."],"reasoning":""}
+{"key":"72:U0","idx":72,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"72:U1","idx":72,"arm":"U1","utility":2,"violated":["The user has a strict budget of $50 for Leo's birthday gift."],"reasoning":""}
+{"key":"72:U2","idx":72,"arm":"U2","utility":3,"violated":["Leo's parents are trying to limit his screen time and want gifts that encourage outdoor play"],"reasoning":""}
+{"key":"72:U3","idx":72,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"73:U0","idx":73,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"73:U1","idx":73,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"73:U2","idx":73,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"73:U3","idx":73,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"74:U0","idx":74,"arm":"U0","utility":3,"violated":["Alex has a severe cat allergy.","Chloe is a vegan."],"reasoning":""}
+{"key":"74:U1","idx":74,"arm":"U1","utility":1,"violated":["Alex has a severe cat allergy.","Chloe is a vegan."],"reasoning":""}
+{"key":"74:U2","idx":74,"arm":"U2","utility":3,"violated":["Alex has a severe cat allergy.","Chloe is a vegan."],"reasoning":""}
+{"key":"74:U3","idx":74,"arm":"U3","utility":3,"violated":["Alex has a severe cat allergy.","Chloe is a vegan."],"reasoning":""}
+{"key":"75:U0","idx":75,"arm":"U0","utility":3,"violated":["A new local cafe recently opened, but reviews mention it is always very loud and crowded.","Alex, another member, is severely allergic to dogs."],"reasoning":""}
+{"key":"75:U1","idx":75,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"75:U2","idx":75,"arm":"U2","utility":3,"violated":["A new local cafe recently opened, but reviews mention it is always very loud and crowded."],"reasoning":""}
+{"key":"75:U3","idx":75,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"76:U0","idx":76,"arm":"U0","utility":2,"violated":["The user's partner follows a strict ketogenic diet."],"reasoning":""}
+{"key":"76:U1","idx":76,"arm":"U1","utility":2,"violated":["The user's partner follows a strict ketogenic diet."],"reasoning":""}
+{"key":"76:U2","idx":76,"arm":"U2","utility":2,"violated":["The user's partner follows a strict ketogenic diet."],"reasoning":""}
+{"key":"76:U3","idx":76,"arm":"U3","utility":2,"violated":["The user's partner follows a strict ketogenic diet."],"reasoning":""}
+{"key":"77:U0","idx":77,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"77:U1","idx":77,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"77:U2","idx":77,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"77:U3","idx":77,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"78:U0","idx":78,"arm":"U0","utility":1,"violated":["User's father, who lives nearby, has severe asthma that is triggered by sawdust and other fine airborne particles."],"reasoning":""}
+{"key":"78:U1","idx":78,"arm":"U1","utility":1,"violated":["User's father, who lives nearby, has severe asthma that is triggered by sawdust and other fine airborne particles."],"reasoning":""}
+{"key":"78:U2","idx":78,"arm":"U2","utility":1,"violated":["User's father, who lives nearby, has severe asthma that is triggered by sawdust and other fine airborne particles."],"reasoning":""}
+{"key":"78:U3","idx":78,"arm":"U3","utility":1,"violated":["User's father, who lives nearby, has severe asthma that is triggered by sawdust and other fine airborne particles."],"reasoning":""}
+{"key":"79:U0","idx":79,"arm":"U0","utility":2,"violated":["Mark's wife, Jessica, is trying to cut down on heavy, starchy foods like potatoes and pasta.","Mark is trying to eat healthier and is currently avoiding all red meat.","Mark and Jessica's son, Leo, is a very picky eater and will only eat simple foods like plain chicken or mac and cheese."],"reasoning":""}
+{"key":"79:U1","idx":79,"arm":"U1","utility":2,"violated":["Mark is trying to eat healthier and is currently avoiding all red meat.","Mark's wife, Jessica, is trying to cut down on heavy, starchy foods like potatoes and pasta.","User's friend, Mark, loves his grandmother's rich, meaty shepherd's pie."],"reasoning":""}
+{"key":"79:U2","idx":79,"arm":"U2","utility":2,"violated":["Mark is trying to eat healthier and is currently avoiding all red meat."],"reasoning":""}
+{"key":"79:U3","idx":79,"arm":"U3","utility":2,"violated":["Mark is trying to eat healthier and is currently avoiding all red meat."],"reasoning":""}
+{"key":"80:U0","idx":80,"arm":"U0","utility":1,"violated":["User's friend Alex, from the board game group, is lactose intolerant.","User's friend Ben, from the hiking club, has a severe peanut allergy."],"reasoning":""}
+{"key":"80:U1","idx":80,"arm":"U1","utility":1,"violated":["User's friend Alex, from the board game group, is lactose intolerant.","User's friend Ben, from the hiking club, has a severe peanut allergy."],"reasoning":""}
+{"key":"80:U2","idx":80,"arm":"U2","utility":1,"violated":["User's friend Alex, from the board game group, is lactose intolerant.","User's friend Ben, from the hiking club, has a severe peanut allergy."],"reasoning":""}
+{"key":"80:U3","idx":80,"arm":"U3","utility":1,"violated":["User's friend Alex, from the board game group, is lactose intolerant.","User's friend Ben, from the hiking club, has a severe peanut allergy."],"reasoning":""}
+{"key":"81:U0","idx":81,"arm":"U0","utility":2,"violated":["The user's cousin, Alex, has a severe shellfish allergy.","User's partner's father, David, strongly dislikes all forms of seafood."],"reasoning":""}
+{"key":"81:U1","idx":81,"arm":"U1","utility":3,"violated":["The user's partner's father, David, strongly dislikes all forms of seafood."],"reasoning":""}
+{"key":"81:U2","idx":81,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"81:U3","idx":81,"arm":"U3","utility":3,"violated":["The user and their partner follow a pescetarian diet."],"reasoning":""}
+{"key":"82:U0","idx":82,"arm":"U0","utility":5,"violated":[],"reasoning":""}
+{"key":"82:U1","idx":82,"arm":"U1","utility":3,"violated":[],"reasoning":""}
+{"key":"82:U2","idx":82,"arm":"U2","utility":2,"violated":["User schedules physical therapy every two weeks for active release therapy on knees, a preventative measure from years of high-impact activities, viewing it as essential maintenance like oil changes for a car.","User visits a small coastal town in Mexico annually for a two-week complete disconnection from technology, spending days reading in a hammock and evenings walking on the beach.","The user's partner is a professional violinist who needs to be within commuting distance of a major city with a professional symphony orchestra.","The user's partner requires a dedicated, soundproofed room for practicing music.","User and their partner have a combined budget of $750,000 for a new home.","The user is a remote software developer who requires a fiber optic internet connection for their work."],"reasoning":""}
+{"key":"82:U3","idx":82,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"83:U0","idx":83,"arm":"U0","utility":2,"violated":["User's spouse gets overwhelmed and anxious in large, noisy crowds.","The user's 15-year-old daughter is a competitive fencer and has a national tournament in Chicago on the second weekend of July.","User's vehicle is a silver hybrid with dog hair permanently embedded in upholstery."],"reasoning":""}
+{"key":"83:U1","idx":83,"arm":"U1","utility":3,"violated":["User's spouse gets overwhelmed and anxious in large, noisy crowds."],"reasoning":""}
+{"key":"83:U2","idx":83,"arm":"U2","utility":2,"violated":["The user's spouse gets overwhelmed and anxious in large, noisy crowds.","The user's 15-year-old daughter is a competitive fencer and has a national tournament in Chicago on the second weekend of July."],"reasoning":""}
+{"key":"83:U3","idx":83,"arm":"U3","utility":2,"violated":["User's spouse gets overwhelmed and anxious in large, noisy crowds.","The user's 15-year-old daughter is a competitive fencer and has a national tournament in Chicago on the second weekend of July."],"reasoning":""}
+{"key":"84:U0","idx":84,"arm":"U0","utility":2,"violated":["The user loves hydrangeas and wants to grow them for their big, colorful blooms."],"reasoning":""}
+{"key":"84:U1","idx":84,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"84:U2","idx":84,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"84:U3","idx":84,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"85:U0","idx":85,"arm":"U0","utility":1,"violated":["The user's friend, Mark, is a strict vegan.","The user's friend, Lisa, has celiac disease and must avoid all gluten."],"reasoning":""}
+{"key":"85:U1","idx":85,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"85:U2","idx":85,"arm":"U2","utility":1,"violated":["The user's friend, Lisa, has celiac disease and must avoid all gluten.","The user's friend, Mark, is a strict vegan."],"reasoning":""}
+{"key":"85:U3","idx":85,"arm":"U3","utility":1,"violated":["The user's friend, Lisa, has celiac disease and must avoid all gluten."],"reasoning":""}
+{"key":"86:U0","idx":86,"arm":"U0","utility":1,"violated":["Chloe has Celiac disease and must avoid gluten.","Mark is severely lactose intolerant.","Sarah is a strict vegan.","The traditional recipe for the casserole requires a ground meat sauce, a creamy cheese sauce, and layers of wheat noodles."],"reasoning":""}
+{"key":"86:U1","idx":86,"arm":"U1","utility":1,"violated":["Chloe has Celiac disease and must avoid gluten.","Mark is severely lactose intolerant.","Sarah is a strict vegan.","The traditional recipe for the casserole requires a ground meat sauce, a creamy cheese sauce, and layers of wheat noodles."],"reasoning":""}
+{"key":"86:U2","idx":86,"arm":"U2","utility":1,"violated":["Chloe has Celiac disease and must avoid gluten.","Mark is severely lactose intolerant.","Sarah is a strict vegan.","The traditional recipe for the casserole requires a ground meat sauce, a creamy cheese sauce, and layers of wheat noodles."],"reasoning":""}
+{"key":"86:U3","idx":86,"arm":"U3","utility":1,"violated":["Chloe has Celiac disease and must avoid gluten.","Mark is severely lactose intolerant.","Sarah is a strict vegan.","The traditional recipe for the casserole requires a ground meat sauce, a creamy cheese sauce, and layers of wheat noodles."],"reasoning":""}
+{"key":"87:U0","idx":87,"arm":"U0","utility":2,"violated":["The user's mother is on a strict soft-food-only diet.","The user has a budget of under $50 for any food delivery."],"reasoning":""}
+{"key":"87:U1","idx":87,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"87:U2","idx":87,"arm":"U2","utility":2,"violated":["The user's mother is on a strict soft-food-only diet."],"reasoning":""}
+{"key":"87:U3","idx":87,"arm":"U3","utility":1,"violated":["The user's mother is on a strict soft-food-only diet.","The user's mother is currently recovering at City General Hospital."],"reasoning":""}
+{"key":"88:U0","idx":88,"arm":"U0","utility":3,"violated":["User's son, Leo, has celiac disease and requires a strict, contamination-free gluten-free diet."],"reasoning":""}
+{"key":"88:U1","idx":88,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"88:U2","idx":88,"arm":"U2","utility":3,"violated":["User's son, Leo, has celiac disease and requires a strict, contamination-free gluten-free diet."],"reasoning":""}
+{"key":"88:U3","idx":88,"arm":"U3","utility":3,"violated":["User's son, Leo, has celiac disease and requires a strict, contamination-free gluten-free diet."],"reasoning":""}
+{"key":"89:U0","idx":89,"arm":"U0","utility":2,"violated":["The user's new client, Mr. Harrison, is a proponent of a 'Blue Zone' lifestyle, prioritizing plant-based foods and holistic wellness."],"reasoning":""}
+{"key":"89:U1","idx":89,"arm":"U1","utility":3,"violated":["The user's new client, Mr. Harrison, is a proponent of a 'Blue Zone' lifestyle, prioritizing plant-based foods and holistic wellness."],"reasoning":""}
+{"key":"89:U2","idx":89,"arm":"U2","utility":2,"violated":["The user's new client, Mr. Harrison, is a proponent of a 'Blue Zone' lifestyle, prioritizing plant-based foods and holistic wellness.","The user is allergic to cats."],"reasoning":""}
+{"key":"89:U3","idx":89,"arm":"U3","utility":2,"violated":["The user's new client, Mr. Harrison, is a proponent of a 'Blue Zone' lifestyle, prioritizing plant-based foods and holistic wellness."],"reasoning":""}
+{"key":"90:U0","idx":90,"arm":"U0","utility":2,"violated":["The user is allergic to shellfish."],"reasoning":""}
+{"key":"90:U1","idx":90,"arm":"U1","utility":2,"violated":["The user is allergic to shellfish."],"reasoning":""}
+{"key":"90:U2","idx":90,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"90:U3","idx":90,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"91:U0","idx":91,"arm":"U0","utility":3,"violated":["The user's father is an avid mountain climber and loves challenging, high-altitude hikes."],"reasoning":""}
+{"key":"91:U1","idx":91,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"91:U2","idx":91,"arm":"U2","utility":3,"violated":["The user's physical therapist has recommended only gentle, low-impact activities for the next few months.","The user has an intense fear of heights (acrophobia)."],"reasoning":""}
+{"key":"91:U3","idx":91,"arm":"U3","utility":3,"violated":["The user has an intense fear of heights (acrophobia)."],"reasoning":""}
+{"key":"92:U0","idx":92,"arm":"U0","utility":3,"violated":[],"reasoning":""}
+{"key":"92:U1","idx":92,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"92:U2","idx":92,"arm":"U2","utility":1,"violated":["Alex is a strict vegetarian.","Alex uses a wheelchair for mobility.","Alex strongly dislikes loud, crowded environments."],"reasoning":""}
+{"key":"92:U3","idx":92,"arm":"U3","utility":1,"violated":["Alex is a strict vegetarian.","Alex uses a wheelchair for mobility.","Alex strongly dislikes loud, crowded environments."],"reasoning":""}
+{"key":"93:U0","idx":93,"arm":"U0","utility":3,"violated":["The user is very frustrated with the light pollution in their area, which ruins night sky visibility."],"reasoning":""}
+{"key":"93:U1","idx":93,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"93:U2","idx":93,"arm":"U2","utility":5,"violated":[],"reasoning":""}
+{"key":"93:U3","idx":93,"arm":"U3","utility":5,"violated":[],"reasoning":""}
+{"key":"94:U0","idx":94,"arm":"U0","utility":1,"violated":["User and their partner are committed to sustainable travel and prefer to avoid places suffering from severe over-tourism."],"reasoning":""}
+{"key":"94:U1","idx":94,"arm":"U1","utility":1,"violated":["User and their partner are committed to sustainable travel and prefer to avoid places suffering from severe over-tourism.","The user's partner is an amateur volcanologist who is fascinated by geothermal activity like geysers and hot springs."],"reasoning":""}
+{"key":"94:U2","idx":94,"arm":"U2","utility":2,"violated":["User and their partner are committed to sustainable travel and prefer to avoid places suffering from severe over-tourism."],"reasoning":""}
+{"key":"94:U3","idx":94,"arm":"U3","utility":2,"violated":["User and their partner are committed to sustainable travel and prefer to avoid places suffering from severe over-tourism."],"reasoning":""}
+{"key":"95:U0","idx":95,"arm":"U0","utility":1,"violated":["Maria is a strict vegan and does not eat any animal products, including seafood.","David has a severe dairy allergy and cannot consume any milk products."],"reasoning":""}
+{"key":"95:U1","idx":95,"arm":"U1","utility":3,"violated":["User is famous among their friends for their creamy New England clam chowder."],"reasoning":""}
+{"key":"95:U2","idx":95,"arm":"U2","utility":1,"violated":["Maria is a strict vegan and does not eat any animal products, including seafood.","David has a severe dairy allergy and cannot consume any milk products."],"reasoning":""}
+{"key":"95:U3","idx":95,"arm":"U3","utility":1,"violated":["Maria is a strict vegan and does not eat any animal products, including seafood.","David has a severe dairy allergy and cannot consume any milk products."],"reasoning":""}
+{"key":"96:U0","idx":96,"arm":"U0","utility":1,"violated":["Brenda is on a strict low-FODMAP diet for health reasons.","Carlos dislikes the texture of all beans and lentils."],"reasoning":""}
+{"key":"96:U1","idx":96,"arm":"U1","utility":3,"violated":["Brenda is on a strict low-FODMAP diet for health reasons."],"reasoning":""}
+{"key":"96:U2","idx":96,"arm":"U2","utility":1,"violated":["Brenda is on a strict low-FODMAP diet for health reasons.","Alex is a vegetarian.","Carlos dislikes the texture of all beans and lentils."],"reasoning":""}
+{"key":"96:U3","idx":96,"arm":"U3","utility":2,"violated":["User's friend Brenda is on a strict low-FODMAP diet for health reasons.","User's friend Carlos dislikes the texture of all beans and lentils."],"reasoning":""}
+{"key":"97:U0","idx":97,"arm":"U0","utility":1,"violated":["The book club's annual gift exchange has a strict $30 price limit.","An influential member of the book club, David, vocally dislikes non-fiction of any kind, finding it too dry."],"reasoning":""}
+{"key":"97:U1","idx":97,"arm":"U1","utility":2,"violated":["The book club's annual gift exchange has a strict $30 price limit."],"reasoning":""}
+{"key":"97:U2","idx":97,"arm":"U2","utility":3,"violated":["The book club's annual gift exchange has a strict $30 price limit."],"reasoning":""}
+{"key":"97:U3","idx":97,"arm":"U3","utility":3,"violated":["The book club's annual gift exchange has a strict $30 price limit."],"reasoning":""}
+{"key":"98:U0","idx":98,"arm":"U0","utility":1,"violated":["User's Golden Retriever, named Barnaby, is prone to pancreatitis and must eat a very low-fat diet."],"reasoning":""}
+{"key":"98:U1","idx":98,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"98:U2","idx":98,"arm":"U2","utility":1,"violated":["Barnaby is prone to pancreatitis and must eat a very low-fat diet."],"reasoning":""}
+{"key":"98:U3","idx":98,"arm":"U3","utility":1,"violated":["Barnaby is prone to pancreatitis and must eat a very low-fat diet."],"reasoning":""}
+{"key":"99:U0","idx":99,"arm":"U0","utility":2,"violated":["The user's teammate Ben has a severe peanut allergy and requires an epinephrine pen."],"reasoning":""}
+{"key":"99:U1","idx":99,"arm":"U1","utility":5,"violated":[],"reasoning":""}
+{"key":"99:U2","idx":99,"arm":"U2","utility":2,"violated":["The user's teammate Ben has a severe peanut allergy and requires an epinephrine pen."],"reasoning":""}
+{"key":"99:U3","idx":99,"arm":"U3","utility":2,"violated":["The user's teammate Ben has a severe peanut allergy and requires an epinephrine pen."],"reasoning":""}

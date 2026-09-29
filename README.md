@@ -1,6 +1,6 @@
 # persistbench-sycophancy
 
-**余弦门控能降 LLM 记忆谄媚吗？——答案：不能。而且后续两轮实验把「为什么不能」钉死了。**
+**余弦门控能降 LLM 记忆谄媚吗？——答案：不能。而且后续三轮实验把「为什么不能」与「什么也不该做」钉死了。**
 
 PersistBench 谄媚切片 × [dsh-mneme](https://github.com/heptaspirit/dsh-mneme) 检索层注入机制的全量实验：
 200 样本 × 2 臂，qwen3:8b 本地 CPU 推理，LLM-as-judge 评审。
@@ -85,6 +85,32 @@ pilot n=10 曾测得 B0.6 +10pp（更谄媚），全量证实为小样本噪声�
 **FR 跟随「池内是否存在意见内容」**。E2+E3 合并:**上下文内标记整条线关闭**,判别器只剩
 注入前 LLM 复核与真实负载路线。附带发现:现有基准按构造测不了第三类知识冲突。
 
+## v4(2026-09-30):E5 效用考卷——heat 进注入排序,现行量级与拟合参数同样有罪
+
+E4 拟合出 λ=1.371、β=0.263 并发现现行 λ 在真实库上近似常数之后,预注册假说「拟合尺度用于
+注入排序会饿死老约束」需要裁决。E5:beneficial 100 条逐条标 role(约束/支撑/无关),回填
+现实先验(**约束→2–6 周前**,支撑→1–3 天,无关→0–3 天),四臂同池同 query、maxItems=5
+预算截断,judge **全池感知**(看完整池不看注入集),utility 1–5 + 逐约束违规:
+
+| 臂 | 排序 | utility | 违规率 | 约束注入率 |
+|---|---|---|---|---|
+| U0 | 无注入 | 2.75 | 48.0% | — |
+| U1 | importance-only | **4.13** | **21.4%** | **99.8%** |
+| U2 | 现行量级 λ=0.002,β=1 | 3.54 | 45.9% | 4.2% |
+| U3 | 拟合参数 λ=1.371,β=0.263 | 3.55 | 45.9% | 4.2% |
+
+- **U3 的注入集与 U2 逐样本完全相同(100/100)**:两个参数档排序等价,「现行还是拟合」的
+  档位之争不存在。两者都把 97/98 样本的约束挤出 top-5——2 周约束热度 exp(−0.002×336)=0.51、
+  6 周=0.13,importance 1.33× 的优势对 2–7× 的 heat 跨度毫无还手之力。**问题不是参数值,
+  是 heat 跨 importance 乘进排序这个结构。**
+- importance-only(U1)拿到双倍 utility 增益(+1.41 vs +0.79)与 ~13 倍违规削减
+  (−26.5pp,方向 35:6);heat 加权注入的违规率与零注入无差(−2.0pp,噪声内)——
+  它注入的恰恰是 utility 不需要的(新鲜 filler),丢掉的恰恰是需要的(老约束)。
+- 预注册判据(U3 vs U1/U2 遵从差 ≥5pp 且方向为负 → 禁入注入)触发:−10.9pp。对 #218:
+  注入侧去 heat / importance 分层优先 / 约束类免疫,配置与代码变更另立产品化步骤。
+- 与 E4「现行参数惰性」的关系:同一枚硬币——惰性是真实库年龄分布偏年轻的产物;年龄混合
+  一拉开(老约束 vs 新噪声),同一个 λ 立即从惰性变凶器。
+
 ## 快速开始
 
 ```bash
@@ -111,6 +137,10 @@ node label-epistemic.mjs --limit 200 --out sycophancy-epistemic-labels.jsonl
 node run-sycophancy.mjs --mneme <dsh-mneme包路径> --mode epistemic --limit 200   --labels sycophancy-epistemic-labels.jsonl --gen results-e2b-gen.jsonl --judge results-e2b-judge.jsonl
 # E9 域门控 oracle 臂(零 LLM,只需嵌入)
 node run-vector.mjs --mneme <dsh-mneme包路径> --cross-domain data/cross_domain.jsonl   --beneficial data/beneficial_samples.jsonl --thresholds 0.5,0.6,0.7,0.75 --topk 10 --gate dom
+# E5 效用考卷(先标 role,再跑四臂)
+node label-utility.mjs --limit 100 --out results-e5-labels.jsonl
+node run-utility.mjs --mneme <dsh-mneme包路径> --labels results-e5-labels.jsonl --limit 100   --gen results-e5-gen.jsonl --judge results-e5-judge.jsonl --gentok 400 --judgetok 700
+python analysis-e5.py
 ```
 
 没有本地算力?`kaggle/` 里有 T4 全套(PORT.md 八条踩坑 + runner notebook),零 API 额度。
@@ -122,12 +152,15 @@ node run-vector.mjs --mneme <dsh-mneme包路径> --cross-domain data/cross_domai
 | 文件 | 内容 |
 |---|---|
 | `analysis-sycophancy-threshold.ipynb` | 全量分析笔记本（主结果 / 配对差分 / Pareto 全景 / 局限） |
-| `e-series-report.ipynb` | v2 报告笔记本：剂量-选择拆分 / epistemic 2×2 / heat 曲线拟合 / 域门控天花板 |
+| `e-series-report.ipynb` | v2 报告笔记本：剂量-选择拆分 / epistemic 2×2 / E3 冲突切片 / heat 曲线拟合 / E5 效用考卷 / 域门控天花板 |
 | `results-e1-{gen,judge}.jsonl` | E1 fixedK 两臂（800+800 行：A / K2top / K2bot / E0 × 200 样本） |
 | `results-e2-{gen,judge}.jsonl` | E2 第一跑（604 行；R+ 臂因写入通路 bug 作废,作 bug 现场留存） |
 | `results-e2b-{gen,judge}.jsonl` | E2 终跑（604 行,修复后:重排真实生效 151/151） |
 | `sycophancy-epistemic-labels.jsonl` | epistemic_status 显式标注 sidecar（195/200 有效） |
 | `label-epistemic.mjs` + `protocol-epistemic-labeler.txt` | 标注协议与脚本（英文样本显式预填） |
+| `results-e5-{gen,judge}.jsonl` + `results-e5-labels.jsonl` | E5 效用考卷（400+400 行 + role 标注 sidecar v16,0 null） |
+| `run-utility.mjs` + `label-utility.mjs` + `protocol-utility-judge.txt` | E5 四臂 harness + role 标注器 + 全池感知效用 judge 协议 |
+| `analysis-e5.py` | E5 归因分析（各臂聚合 + 配对差 + 机制核查,覆盖率显式打印） |
 | `run-vector.mjs` + `data/cross_domain.jsonl` + `data/beneficial_samples.jsonl` | E9 域门控 oracle 臂（`--gate dom`） |
 | `heat-fit-results.json` | E4 heat 曲线拟合聚合结果（幂律 vs 广义指数,per-type β/λ） |
 | `results-e3-{gen,judge}.jsonl` + `results-e3-cf.jsonl` | E3 知识冲突切片(756+756 行 + 189 条反事实) |
