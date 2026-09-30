@@ -111,6 +111,31 @@ E4 拟合出 λ=1.371、β=0.263 并发现现行 λ 在真实库上近似常数�
 - 与 E4「现行参数惰性」的关系:同一枚硬币——惰性是真实库年龄分布偏年轻的产物;年龄混合
   一拉开(老约束 vs 新噪声),同一个 λ 立即从惰性变凶器。
 
+## v5(2026-09-30):E7 strictScope 考卷 + E8 压缩悬崖保真
+
+**E7(MUMBench 可检验点)**:100 合成多用户样本(用户 X 的 query + Y 的同话题私有记忆,唯一 marker),
+三臂 n=80:S2 无标注 / S1 explicit+软档 / S0 硬墙。
+
+- 注入通道:Y 私有条目暴露率 S2 **100%** / S1 **100%** / S0 **0%**;**S1 注入集 ≡ S2 逐样本相同(80/80)**
+  ——软加权 ×0.5 只存在于检索通道(service.js:1533),自动注入只有「关」和「硬墙」两档。
+- 响应级:marker 溯源 S2 47.5% vs S0 背景 11.2% → **可归属泄露 +36.2pp**(不可猜型号名 40% vs 0%)。
+- **泄露 judge 自身重演 MUMBench 严格操作缺口**:S0 零 Y 注入仍判 92.5% 泄露,leaked 字段 97.8% 是
+  y_private 原文回显——LLM 泄露判定必须配唯一 marker 机械溯源。
+
+**E8(Compaction Cliff 管线等价物)**:40 会话(5 场景 × 8 marker 变体)× 真代码路径(蒸馏 prompt/解析/
+写入/巩固校验/120 字符截断):
+
+| 阶段 | S1 蒸馏 | S2 巩固 | R1 再蒸馏 | R2 再蒸馏 |
+|---|---|---|---|---|
+| 约束保真(faithful) | 83.1% | 66.0% | 46.2% | 35.6% |
+
+- **JSON 崩溃 = 机器形态的静默失守**:10-20% 窗口输出含约束的完整数组但一处语法错误被解析器整窗拒收
+  → 生产行为 = 游标卡死 + 温度 0 重试同错 = 静默丢失。再蒸馏使崩溃率翻倍(10%→20%)。
+- 崩溃外纯压缩:S1 **92.4%** 及格 → R1 57.8% → R2 40.7%。悬崖不在蒸馏 prompt,在巩固(−17pp,护栏漏
+  merge)与再蒸馏循环。
+- **干预臂 B(prompt 加类型感知保真指令)净负**:类型归位 37.6%→83.7% 但崩溃 10%→17.5% 吃掉全部语义
+  收益——triage 必须做在管线层,不是加一句话。
+
 ## 快速开始
 
 ```bash
@@ -141,6 +166,14 @@ node run-vector.mjs --mneme <dsh-mneme包路径> --cross-domain data/cross_domai
 node label-utility.mjs --limit 100 --out results-e5-labels.jsonl
 node run-utility.mjs --mneme <dsh-mneme包路径> --labels results-e5-labels.jsonl --limit 100   --gen results-e5-gen.jsonl --judge results-e5-judge.jsonl --gentok 400 --judgetok 700
 python analysis-e5.py
+# E7 strictScope(造池是确定性的,零 LLM 标注)
+python gen-scope-bench.py
+node run-scope.mjs --mneme <dsh-mneme包路径> --bench data/scope_bench.jsonl --limit 80   --gen results-e7-gen.jsonl --judge results-e7-judge.jsonl --search results-e7-search.jsonl
+python analysis-e7.py
+# E8 压缩悬崖(真 prompt + 真解析 + 真写入路径)
+python gen-cliff-sessions.py
+node run-cliff.mjs --mneme <dsh-mneme包路径> --sessions data/cliff_sessions.jsonl --limit 40   --out results-e8 --distilltok 1600 --judgetok 700
+python analysis-e8.py
 ```
 
 没有本地算力?`kaggle/` 里有 T4 全套(PORT.md 八条踩坑 + runner notebook),零 API 额度。
@@ -161,6 +194,12 @@ python analysis-e5.py
 | `results-e5-{gen,judge}.jsonl` + `results-e5-labels.jsonl` | E5 效用考卷（400+400 行 + role 标注 sidecar v16,0 null） |
 | `run-utility.mjs` + `label-utility.mjs` + `protocol-utility-judge.txt` | E5 四臂 harness + role 标注器 + 全池感知效用 judge 协议 |
 | `analysis-e5.py` | E5 归因分析（各臂聚合 + 配对差 + 机制核查,覆盖率显式打印） |
+| `results-e7-{gen,judge,search}.jsonl` | E7 strictScope 三臂（240×3 行 + 检索通道机械读数） |
+| `run-scope.mjs` + `gen-scope-bench.py` | E7 三臂 harness + 确定性多用户造池器（marker 数字边界防误报） |
+| `analysis-e7.py` | E7 归因（S0 背景扣除 + judge 仪器核查） |
+| `results-e8-{gen,judge,mech}.jsonl` | E8 压缩悬崖（40 会话 × S1/S2/S3/R1/R2/B,200+200+240 行） |
+| `run-cliff.mjs` + `gen-cliff-sessions.py` | E8 真代码路径 harness + 场景变体造会话器 |
+| `analysis-e8.py` | E8 归因（崩溃/纯压缩拆分 + 护栏交叉表） |
 | `run-vector.mjs` + `data/cross_domain.jsonl` + `data/beneficial_samples.jsonl` | E9 域门控 oracle 臂（`--gate dom`） |
 | `heat-fit-results.json` | E4 heat 曲线拟合聚合结果（幂律 vs 广义指数,per-type β/λ） |
 | `results-e3-{gen,judge}.jsonl` + `results-e3-cf.jsonl` | E3 知识冲突切片(756+756 行 + 189 条反事实) |
