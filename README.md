@@ -136,6 +136,24 @@ E4 拟合出 λ=1.371、β=0.263 并发现现行 λ 在真实库上近似常数�
 - **干预臂 B(prompt 加类型感知保真指令)净负**:类型归位 37.6%→83.7% 但崩溃 10%→17.5% 吃掉全部语义
   收益——triage 必须做在管线层,不是加一句话。
 
+## v6(2026-10-02):E10 EdgeMem 考卷——零 LLM 原样写入细节保真 100%
+
+EdgeMem(2609.05553)的可检验点:「摘要式记忆在不知道未来查询时提前丢掉含答案的细节」。
+30 合成会话 × 4 条桥接事实(唯一 marker,只被后续 QA 问到)= 120 个细节 QA,三臂同题:
+
+| 臂 | 构建调用 | 库内存活 | QA full |
+|---|---|---|---|
+| Z0 原样写入 | **0** | **100%** | **100%** |
+| Z1 蒸馏 | 30 | 85.8% | 75.8% |
+| Z2 蒸馏+叙述条 | 60 | 85.8% | 85.8% |
+
+- **预注册判据触发**:Z0−Z1 = +21.7pp(13:0:17,Z0 从未更差)——蒸馏在库层丢 17/120,端到端差
+  21.7pp。**最便宜的臂细节保真最高**,EdgeMem 的质量-成本双优在本管线逐字复现。
+- **叙述条是冗余备份不是保障**:Z2 比 Z1 好 7.9pp(叙述复述了部分 marker,给被丢细节第二次注入
+  机会),但仍比 Z0 差 13.8pp。
+- 诚实限制:Z0 是理想化映射(逐条事实入库,桥接事实按可条目化设计,利好 Z0);QA 只测细节保真,
+  蒸馏的归纳增益在别的口径。
+
 ## 快速开始
 
 ```bash
@@ -200,6 +218,9 @@ python analysis-e8.py
 | `results-e8-{gen,judge,mech}.jsonl` | E8 压缩悬崖（40 会话 × S1/S2/S3/R1/R2/B,200+200+240 行） |
 | `run-cliff.mjs` + `gen-cliff-sessions.py` | E8 真代码路径 harness + 场景变体造会话器 |
 | `analysis-e8.py` | E8 归因（崩溃/纯压缩拆分 + 护栏交叉表） |
+| `results-e10-{gen,judge,mech}.jsonl` | E10 EdgeMem 考卷（30 会话 × 3 臂,420+90+90 行） |
+| `run-edgemem.mjs` + `gen-edgemem-sessions.py` + `protocol-qa-*.txt` | E10 三臂 harness + 造会话器 + QA 判卷协议 |
+| `analysis-e10.py` | E10 归因（存活/注入/QA 三层 + 配对差 + 质量-成本平面） |
 | `run-vector.mjs` + `data/cross_domain.jsonl` + `data/beneficial_samples.jsonl` | E9 域门控 oracle 臂（`--gate dom`） |
 | `heat-fit-results.json` | E4 heat 曲线拟合聚合结果（幂律 vs 广义指数,per-type β/λ） |
 | `results-e3-{gen,judge}.jsonl` + `results-e3-cf.jsonl` | E3 知识冲突切片(756+756 行 + 189 条反事实) |
